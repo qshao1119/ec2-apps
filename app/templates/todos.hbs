@@ -1,0 +1,12 @@
+<div class="row" class="container-fluid col-md-12">
+  <div id="todos-overview" class="col-md-2">
+    {{activeTodos}} left
+  </div>
+  <div id="todos-wrapper" class="col-md-10">
+      {{input id="todo-input" value=newItem placeholder="enter new todo" action="insertTodo" on="enter"}}
+      {{#each todo in todos}}
+          {{view 'todo' todo=todo}}
+      {{/each}}
+  </div>
+
+</div>

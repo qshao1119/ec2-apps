@@ -1,0 +1,30 @@
+<div id="app-wrapper" class="container-fluid">
+  <div id="topbar" class="row darkbg">
+    <div class="col-md-12">
+      <div id="app-name">Qli' Random App Collection</div>
+    </div>
+  </div>
+  <div id="main-row" class="row">
+    <table>
+      <tr>
+        <td id="navbar" class="darkbg">
+          <ul class="clear-ul">
+            <li>{{#link-to 'todos'}}
+              <img class="nav-icon" src="assets/nav-icons/todo_list.png"><br>
+              todo
+            {{/link-to}}</li>
+            <li>{{#link-to 'calc'}}
+              <img class="nav-icon" src="assets/nav-icons/calc_icon.png"><br>
+              calculator
+            {{/link-to}}</li>
+          </ul>
+        </td>
+        <td>
+          <div id="content-wrapper">
+              {{outlet}}
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
