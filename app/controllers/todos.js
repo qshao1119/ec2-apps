@@ -3,7 +3,7 @@ import STORE from '../utils/local-store';
 import CONST from '../utils/constants';
 
 function createNewTodo(content) {
-  return {content: content, completed: false, createdOn: new Date()};
+  return {id: Math.random().toString(36).substring(8), content: content, completed: false, createdOn: new Date()};
 }
 
 export default Ember.Controller.extend({
