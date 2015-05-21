@@ -26,7 +26,7 @@ export default Ember.Controller.extend({
   updateStore: function() {
     STORE.save(CONST.TODOS, this.get('todos'));
     console.log('saved todos');
-  }.observes('todos.@each'),
+  }.observes('todos.@each', 'todos.@each.completed'),
 
   actions: {
     insertTodo: function() {
