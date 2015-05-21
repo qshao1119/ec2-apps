@@ -1,12 +1,6 @@
 <div class="todo-view" xmlns="http://www.w3.org/1999/html">
-    {{#if view.todo.completed}}
-    <span class="todo-status">
-      <img src="assets/todos/checkbox-checked.png"></span>
-      <s class="todo-completed">{{view.todo.content}}</s>
-    {{else}}
-        <span class="todo-status">
-      <img src="assets/todos/checkbox-unchecked.png"></span>
-      <span>{{view.todo.content}}</span>
-    {{/if}}
+  <span>{{input type="checkbox" id=view.id checked=view.todo.completed}}<label {{bind-attr for="view.id"}}></label></span>
+  <span {{bind-attr class="view.contentClass"}}>{{view.todo.content}}</span>
+
   <span class="todo-delete"><button {{action "deleteTodo" view.todo}}><img src="assets/todos/delete.png"></button></span>
 </div>

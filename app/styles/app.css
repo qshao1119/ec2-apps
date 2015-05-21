@@ -40,16 +40,17 @@ table {
     border-right: 1px solid #dcdcdc;
     border-top: 1px solid #dcdcdc;
     font-size: 24px;
-    padding: 5px 0 5px 0px;
+    padding: 5px 0 5px 5px;
     width: 500px
 }
 
 .todo-completed {
     color: #aaaaaa;
+    text-decoration: line-through;
 }
 
 .nav-icon {
-    width: 64px;
+    width: 50px;
 }
 
 .todo-status img {
@@ -63,6 +64,28 @@ table {
     padding: 5px 0 5px 0px;
     border-top: 1px solid #dcdcdc;
     min-width: 500px;
+}
+
+.todo-view input[type=checkbox] {
+    display:none;
+}
+
+.todo-view input[type=checkbox] + label {
+    border: 2px solid #aaaaaa;
+    height: 20px;
+    width: 20px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    margin: 0 0 -2px 0px;
+}
+
+.todo-view input[type=checkbox]:checked + label {
+    background: #aaaaaa;
+    height: 20px;
+    width: 20px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    margin: 0 0 -2px 0px;
 }
 
 #navbar {
@@ -110,3 +133,4 @@ table {
 .todo-delete {
     float: right;
 }
+
