@@ -33,6 +33,7 @@ table {
     margin: 40px 0px 0px 0px;
     border-right: 1px solid #dcdcdc;
     text-align: left;
+    font-size: 14pt;
 }
 
 #todo-input {
@@ -95,7 +96,8 @@ table {
 }
 
 #navbar a.active {
-    color: #ffffff;
+    color: white;
+    font-weight: bold;
 }
 
 #navbar li {
