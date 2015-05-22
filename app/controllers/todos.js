@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
       }
     }
     return count;
-  }.property('todos.@each'),
+  }.property('todos.@each', 'todos.@each.completed'),
 
   updateStore: function() {
     STORE.save(CONST.TODOS, this.get('todos'));
