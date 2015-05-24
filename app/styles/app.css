@@ -25,8 +25,9 @@ table {
 
 #todos-wrapper {
     margin: 40px 0px 0px 0px;
-    border-bottom: 1px solid #dcdcdc;
-    border-left: 1px solid #dcdcdc;
+    padding-left: 0;
+    /*border-bottom: 1px solid #dcdcdc;*/
+    /*border-left: 1px solid #dcdcdc;*/
 }
 
 #todos-overview {
@@ -37,12 +38,10 @@ table {
 }
 
 #todo-input {
-    border-left: 1px solid #dcdcdc;
-    border-right: 1px solid #dcdcdc;
-    border-top: 1px solid #dcdcdc;
+    border: 1px solid #dcdcdc;
     font-size: 24px;
     padding: 5px 0 5px 5px;
-    width: 500px
+    width: 100%
 }
 
 .todo-completed {
@@ -63,7 +62,7 @@ table {
     font-size: 24px;
     margin: 0px;
     padding: 5px 0 5px 0px;
-    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
     min-width: 500px;
 }
 
@@ -89,9 +88,14 @@ table {
     margin: 0 0 -2px 0px;
 }
 
+#todos-report-wrapper {
+    border-left: 3px solid #008000;
+    min-height: 800px;
+}
+
 #navbar {
     vertical-align: top;
-    width: 100px;
+    min-width: 100px;
     color: white;
 }
 
@@ -101,9 +105,19 @@ table {
 }
 
 #navbar li {
-    /*border-top: 1px solid #555555;*/
     border-bottom: 1px solid #5e5e5e;
     padding: 10px 0px 5px 0px;
+    opacity: 0.4;
+}
+
+#navbar li:hover {
+    /*background-color: yellow;*/
+    opacity: 1.0;
+
+}
+
+#navbar a.active li {
+    opacity: 1.0;
 }
 
 #navbar ul {
@@ -119,8 +133,11 @@ table {
 
 #content-wrapper {
     min-height: 800px;
-    min-width: 800px;
     padding-left: 5px;
+}
+
+#content-td {
+    width: 100%;
 }
 
 .todo-delete button {
@@ -136,3 +153,6 @@ table {
     float: right;
 }
 
+.bydate li {
+    font-size: 20px;
+}
