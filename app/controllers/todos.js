@@ -26,7 +26,11 @@ export default Ember.Controller.extend({
         todo.completedDate = null;
       } else {
         var date = new Date();
-        todo.completedDate = date;
+        if (todo.completedDate) {
+          date = new Date(todo.completedDate);
+        } else {
+          todo.completedDate = date;
+        }
         var dateString = UTIL.toDateString(date);
         if (dateString in byDates) {
           byDates[dateString].push(todo);
