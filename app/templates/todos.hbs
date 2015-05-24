@@ -1,11 +1,15 @@
 <div class="row" class="container-fluid col-md-12">
-  <div id="todos-overview" class="col-md-2">
-    {{activeTodos}} left
-  </div>
-  <div id="todos-wrapper" class="col-md-10">
+  <div id="todos-wrapper" class="col-md-6">
       {{input id="todo-input" value=newItem placeholder="enter new todo" action="insertTodo" on="enter"}}
       {{#each todo in todos}}
           {{view 'todo' todo=todo}}
+      {{/each}}
+  </div>
+  <div id="todos-report-wrapper" class="col-md-6">
+    <h4>Completed Todos by Completing Date</h4>
+      {{#each date in completedDates}}
+          <h3>{{date}}</h3>
+          {{view 'bydate' completedByDates=completedByDates date=date}}
       {{/each}}
   </div>
 
