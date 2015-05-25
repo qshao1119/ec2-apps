@@ -1,3 +1,4 @@
 export default {
-  TODOS: 'OLI-TODOS'
+  TODOS: 'OLI-TODOS',
+  CALC: 'OLI-CALC-HIST'
 };

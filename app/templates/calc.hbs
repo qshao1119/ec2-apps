@@ -1,1 +1,19 @@
-<h2>This is calc.</h2>
+<div class="row" class="container-fluid col-md-12">
+  <div id="calc-wrapper" class="col-md-8">
+      {{input id="calc-input" value=equation placeholder="enter an expression, e.g., 3 + 4 * sqrt(7)" action="evaluate" on="enter"}}
+      <h4>Calculator History</h4>
+      <div id="calc-hist-box">
+      	{{#each h in hist}}
+      	<h5 class="equation" {{action 'copyEq'  h.equation on='doubleClick'}}>{{h.equation}}</h5>
+      	<h5 class="result">{{h.result}}</h5>
+      	{{/each}}
+      </div>
+  </div>
+  <div id="calc-help-wrapper" class="col-md-4">
+    <h4>Calculator Help</h4>
+    <p>
+    	The calculator is powered by math.js. In the history box, the gold-highlighted lines are expressions. Double click an expression in the box can copy the expression to the input box.
+    </p>
+  </div>
+
+</div>
