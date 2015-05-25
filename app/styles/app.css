@@ -8,6 +8,42 @@ table {
     -webkit-border-vertical-spacing: 0px;
 }
 
+h5.equation {
+    width: 100%;
+    background-color: gold;
+    margin:0;
+    padding: 5px 0 5px 5px;
+}
+h5.result {
+    padding: 5px 0 5px 5px;
+    width: 100%;
+    background-color: #dcdcdc;
+    margin:0;
+}
+
+
+#calc-wrapper {
+    margin-top: 30px;
+}
+
+#calc-help-wrapper {
+    margin-top: 30px;
+    border-left: 3px solid gray;
+    min-height: 800px;
+}
+
+#calc-input {
+    border: 1px solid #dcdcdc;
+    font-size: 18px;
+    padding: 5px 0 5px 5px;
+    width: 100%
+}
+
+#calc-hist-box {
+    border: 1px solid gray;
+    min-height: 500px;
+}
+
 .darkbg {
     background: #232f3e;
 }

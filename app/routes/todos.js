@@ -2,7 +2,6 @@ import Ember from 'ember';
 import STORE from '../utils/local-store';
 import CONST from '../utils/constants';
 
-
 export default Ember.Route.extend({
   setupController: function (controller) {
     var key = CONST.TODOS;
